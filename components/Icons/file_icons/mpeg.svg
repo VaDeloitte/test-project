@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- File background (light violet for video/mpeg) -->
+  <path d="M17.5858 2H9C6.79086 2 5 3.79086 5 6V26C5 28.2091 6.79086 30 9 30H23C25.2091 30 27 28.2091 27 26V11.4142C27 11.149 26.8946 10.8946 26.7071 10.7071L18.2929 2.29289C18.1054 2.10536 17.851 2 17.5858 2Z" fill="#F3E5F5"/>
+  <!-- File type text (deep purple for contrast) -->
+  <text x="5.8" y="24" fill="#6A1B9A" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="500">MPEG</text>
+  <!-- File corner fold (medium violet accent) -->
+  <path d="M22 11H27L18 2V7C18 9.20914 19.7909 11 22 11Z" fill="#CE93D8"/>
+</svg>

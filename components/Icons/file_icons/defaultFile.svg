@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- File background (light aqua for audio/wav) -->
+  <path d="M17.5858 2H9C6.79086 2 5 3.79086 5 6V26C5 28.2091 6.79086 30 9 30H23C25.2091 30 27 28.2091 27 26V11.4142C27 11.149 26.8946 10.8946 26.7071 10.7071L18.2929 2.29289C18.1054 2.10536 17.851 2 17.5858 2Z" fill="#c0c1c2"/>
+  <!-- File type text (deep teal for contrast) -->
+  <text x="9" y="24" fill="#141414" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700">File</text>
+  <!-- File corner fold (medium aqua accent) -->
+  <path d="M22 11H27L18 2V7C18 9.20914 19.7909 11 22 11Z" fill="#141414"/>
+</svg>

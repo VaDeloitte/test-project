@@ -1,0 +1,8 @@
+#sidebarInfoTab div {
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    font-size: small;
+}
+#sidebarInfoTab div:hover {
+    background-color: #E0E0E0;
+}
