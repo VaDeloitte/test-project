@@ -1,0 +1,615 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Src App Styles */
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Remove caret/cursor from all inputs globally */
+/* * {
+  caret-color: transparent !important;
+} */
+
+/* Ensure proper box sizing for all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Fix for Next.js specific layout issues */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* background-color: #F2F6F7; */
+}
+
+html:not(.dark), 
+html:not(.dark) body {
+  background-color: #F2F6F7;
+}
+
+html.dark body {
+  background-color: #121212; /* from figma: #111516 */
+}
+
+
+#__next {
+  height: 100%;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+.list-disc1 li>div {
+  position: relative;
+  padding-left: 20px;
+}
+
+.list-disc1 li>div:before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+}
+.dark .searchAutoCompleteDropDown .list-disc1 li>div:hover {
+  background-color: #000;
+}
+.searchAutoCompleteDropDown .list-disc1 li>div:before {
+  content: none;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+
+/* 
+.arrow:before {
+  content: '';
+  border-right: 8px solid;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  left: -8px;
+  top: 9px;
+} */
+
+
+
+.mark-down a {
+  word-break: break-all;
+  display: block;
+}
+.mark-down p {
+  font-size: 12px;
+}
+
+
+/* Unordered Lists */
+.mark-down ul {
+  font-size: 12px;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+.mark-down ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* Ordered Lists */
+.mark-down ol {
+  font-size: 12px;
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+.mark-down ol li {
+  margin-bottom: 0.25rem;
+}
+
+/* Tables */
+.mark-down table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 12px;
+}
+.mark-down th,
+.mark-down td {
+  border: 1px solid #d1d5db; /* gray-300 */
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.mark-down td {
+  font-weight: 200;
+}
+
+.mark-down th {
+  background: #f3f4f6; /* gray-100 */
+  font-weight: 600;
+}
+
+/* Code Blocks */
+.mark-down pre {
+  background: #1f2937; /* gray-800 */
+  color: #f3f4f6;       /* gray-100 */
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+.mark-down code {
+  background: #e5e7eb; /* gray-200 */
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+/* Inline code override */
+.mark-down p code {
+  background: #e5e7eb;
+}
+
+/* Blockquotes */
+.mark-down blockquote {
+  font-size: 12px;
+  border-left: 4px solid #d1d5db; /* gray-300 */
+  padding-left: 1rem;
+  color: #4b5563; /* gray-600 */
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+/* Horizontal rule */
+.mark-down hr {
+  border: none;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 1.5rem 0;
+}
+
+
+body {
+  background-repeat: no-repeat;
+  /* Ensures image does not repeat */
+  background-position: 70% 0%;
+  /* Positions the image to the right */
+  /* background-image: linear-gradient(to bottom left, #000, #000); */
+  /* background-color: #171719; */
+  min-height: 100vh;
+  /* Ensures the body height is at least 100% of the viewport height */
+}
+
+body.homeLayout {
+  background-repeat: no-repeat;
+  /* Ensures image does not repeat */
+  background-position: 70% 40%;
+  /* Positions the image to the right */
+  /* background-image: url('../public/assets/art.png'), linear-gradient(to bottom left, #000, #171719); */
+  min-height: 100vh;
+  /* Ensures the body height is at least 100% of the viewport height */
+  margin-bottom: 10px;
+}
+
+/* .light body {
+  background-image: url('../public/assets/art.png'), linear-gradient(to bottom left, #EDEDFF, #C5C5D1);
+  background-color: #EDEDFF;
+} */
+
+.dark-gradient {
+  height: 100%;
+}
+
+
+.bg-art {
+  background-position: 10px 680px;
+}
+
+@media (max-width: 720px) {
+  pre {
+    width: calc(100vw - 110px);
+  }
+
+  .bg-art {
+    background-position: 0px 98% !important;
+  }
+}
+
+pre:has(div.codeblock) {
+  padding: 0;
+}
+
+.blend-mode {
+  mix-blend-mode: lighten;
+  /* Apply the blend mode here */
+}
+/* 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+} */
+
+.break-words.bg-gray-500{
+  background: #2c5234;
+}
+/* 
+table th:first-child,
+table td:first-child {
+  border-left: none;
+}
+
+table th:last-child,
+table td:last-child {
+  border-right: none;
+}
+
+table tr:first-child th,
+table tr:first-child td {
+  border-top: none;
+}
+
+table tr:last-child th,
+table tr:last-child td {
+  border-bottom: none;
+} */
+
+
+.font-abhaya-libre {
+  font-family: 'Abhaya Libre', sans-serif;
+}
+
+.font-abhaya-libre-medium {
+  font-family: 'Abhaya Libre Medium', sans-serif;
+}
+
+.font-abhaya-libre-semibold {
+  font-family: 'Abhaya Libre SemiBold', sans-serif;
+}
+
+.font-abhaya-libre-extrabold {
+  font-family: 'Abhaya Libre ExtraBold', sans-serif;
+}
+
+.leading-normal {
+  line-height: normal;
+}
+
+@keyframes dots {
+  0% {
+    content: ".";
+  }
+
+  33% {
+    content: "..";
+  }
+
+  66% {
+    content: "...";
+  }
+
+  100% {
+    content: ".";
+  }
+}
+
+.loading-dots::after {
+  content: ".";
+  animation: dots 1s infinite;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+      max-width: 100%;
+  }
+}
+
+.workflow-tab {
+  min-height: 525px;
+  max-height: 525px;
+}
+
+.workflow-tab-content {
+  height: 420px; /* Fixed height */
+  overflow: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color:  #2c5234 rgba(0, 0, 0, 0.1); /* Firefox */
+  padding-right: 10px; /* Add left padding to move content slightly away from scrollbar */
+}
+
+
+.first-message p,
+.first-message h1,
+.first-message h2,
+.first-message h3,
+.first-message h4,
+.first-message strong
+{
+  font-size: 32px;
+  margin-top: -10px;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  width: 100%;
+}
+
+.space-right p{
+  padding-right: 7%;
+}
+
+/* ol, ul{
+  list-style: revert;
+} */
+
+.workflow-tab ul,.sidebar-blk ul, header ul,.models-blk{
+  list-style: none;
+}
+
+ menu{
+  list-style: inherit;
+}
+
+.model-button {
+  margin: 10px;
+  padding: 10px 20px;
+  width: 150px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.model-button:last-child {
+  background-color: #dc3545;
+}
+
+
+  /* Scroll bars */
+@layer utilities {
+
+  /* Small scroll bar */
+  .small-scrollbar::-webkit-scrollbar {
+    width: 4px; /* Vertical scrollbar width */
+    height: 4px; /* Horizontal scrollbar height */
+  }
+  .small-scrollbar::-webkit-scrollbar-track {
+    background: #edf2f7; /* Light gray background */
+    border-radius: 12px;
+  }
+  .small-scrollbar::-webkit-scrollbar-button {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  .small-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #a0aec0; /* Gray thumb */
+    border-radius: 10px;
+    /* border: 1px solid transparent;
+    background-clip: content-box; */
+  }
+  .small-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #718096; /* Darker gray on hover */
+  }
+  .dark .small-scrollbar::-webkit-scrollbar-track {
+    background: #353535; /* Light gray background */
+  }
+  .dark .small-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #798992; /* Gray thumb */
+  }
+
+
+  /* medium scroll bar */
+  .medium-scrollbar::-webkit-scrollbar {
+    width: 6px; /* Vertical scrollbar width */
+    height: 6px; /* Horizontal scrollbar height */
+  }
+  .medium-scrollbar::-webkit-scrollbar-track {
+    background: #edf2f7; /* Light gray background */
+    border-radius: 12px;
+  }
+  .medium-scrollbar::-webkit-scrollbar-button {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  .medium-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #a0aec0; /* Gray thumb */
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+  }
+  .medium-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #718096; /* Darker gray on hover */
+  }
+
+  .dark .medium-scrollbar::-webkit-scrollbar-track {
+    background: #353535; /* Light gray background */
+  }
+  .dark .medium-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #798992; /* Gray thumb */
+  }
+
+  /* Hide scrollbar */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* default scroll bar */
+::-webkit-scrollbar {
+    width: 6px; /* Vertical scrollbar width */
+    height: 6px; /* Horizontal scrollbar height */
+  }
+::-webkit-scrollbar-track {
+    background: #edf2f7; /* Light gray background */
+    border-radius: 12px;
+  }
+::-webkit-scrollbar-button {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+::-webkit-scrollbar-thumb {
+    background-color: #a0aec0; /* Gray thumb */
+    border-radius: 10px;
+    /* border: 1px solid transparent;
+    background-clip: content-box; */
+  }
+::-webkit-scrollbar-thumb:hover {
+    background-color: #718096; /* Darker gray on hover */
+  }
+
+.dark ::-webkit-scrollbar-track {
+  background: #353535;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #798992; /* Gray thumb */
+}
+
+  /* 🔥 Force dark mode styling for DatePicker input */
+.dark .react-datepicker__input-container input,
+.dark input.react-datepicker-ignore-onclickoutside {
+  color: #fff;
+  /* background-color: #2A2B2E !important; */
+  border-color: #3A3B3D !important;
+}
+
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected{
+  background-color: #2A2B2E !important;
+}
+.dark .react-datepicker__input-container input::placeholder {
+  color: #e5e7eb !important; /* gray-200 */
+}
+
+/* 🔥 Ensure popup calendar matches dark mode */
+.dark .react-datepicker,
+.dark .react-datepicker__header,
+.dark .react-datepicker__day-name,
+.dark .react-datepicker__day,
+.dark .react-datepicker__current-month {
+  /* background-color: #2A2B2E !important; */
+  color: #fff;
+  border-color: #3A3B3D !important;
+}
+
+.dark .react-datepicker__header{
+  background-color: #2A2B2E !important;
+}
+/* Hover and selected states in dark mode */
+.dark .react-datepicker__day:hover {
+  background-color: #1E1E1E !important;
+}
+.dark .react-datepicker__day--disabled:hover{
+  background-color: #f3f4f64f !important;
+  cursor: not-allowed;
+}
+.dark .react-datepicker__day--selected {
+  background-color: #43B02A !important;
+  color: #fff !important;
+}
+
+.custom-cursor {
+  cursor: auto;
+}
+
+.hover-box {
+  display: inline-block;width: 100%;
+  cursor: not-allowed; /* default cursor */
+  position: relative;
+  /* z-index: 10; */
+  z-index: auto;  /* remove stacking context */
+}
+
+/* show message on hover */
+.hover-box:hover::after {
+  content: attr(data-message);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 6px 10px;
+  background: #333;
+  /* z-index: 10; */
+  z-index: auto;  /* remove stacking context */
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+
+
+
+
+.scrollable-input:focus {
+  border: none;               /* Remove the border when focused */
+  outline: none;              /* Remove the outline (optional) */
+}
