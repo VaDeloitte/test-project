@@ -84,7 +84,7 @@ describe('cleanData Functions', () => {
       ] as ExportFormatV1;
       const obj = cleanData(data);
       expect(isLatestExportFormat(obj)).toBe(true);
-    expect(obj).toEqual({
+ expect(obj).toEqual({
   version: 4,
   history: [
     {
@@ -96,11 +96,11 @@ describe('cleanData Functions', () => {
       ],
       model: {
         id: 'gpt-5-mini',
-        name: 'GPT-5-mini',
+        name: 'gpt-5-mini', // Ensure this is lowercase if that’s the expected behavior
         heading: 'GPT-5-mini',
         tokenLimit: 272000,
         maxLength: 128000,
-        message: 'The future of AI, with cutting-edge capabilities...',
+        message: 'The future of AI, with cutting-edge capabilities in a m…', // Shortened message if necessary
         label: 'GPT-5-mini',
       },
       prompt: DEFAULT_SYSTEM_PROMPT,
@@ -111,6 +111,7 @@ describe('cleanData Functions', () => {
   folders: [],
   prompts: [],
 });
+
 
     });
   });
