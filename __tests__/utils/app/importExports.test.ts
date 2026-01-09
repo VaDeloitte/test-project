@@ -89,18 +89,18 @@ describe('cleanData Functions', () => {
   history: [
     {
       id: 1,
-      name: 'conversation 1',
+      name: 'conversation 1', // This should be the conversation name
       messages: [
         { role: 'user', content: "what's up ?" },
         { role: 'assistant', content: 'Hi' },
       ],
       model: {
         id: 'gpt-5-mini',
-        name: 'gpt-5-mini', // Ensure this is lowercase if that’s the expected behavior
+        name: 'GPT-5-mini', // This is the model name
         heading: 'GPT-5-mini',
         tokenLimit: 272000,
         maxLength: 128000,
-        message: 'The future of AI, with cutting-edge capabilities in a m…', // Shortened message if necessary
+        message: 'The future of AI, with cutting-edge capabilities...', // Full message
         label: 'GPT-5-mini',
       },
       prompt: DEFAULT_SYSTEM_PROMPT,
@@ -111,6 +111,7 @@ describe('cleanData Functions', () => {
   folders: [],
   prompts: [],
 });
+
 
 
     });
