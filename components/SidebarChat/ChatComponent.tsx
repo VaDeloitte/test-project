@@ -291,7 +291,6 @@ export const ChatComponent = () => {
 
     // Attach the event listener
     window.addEventListener('refresh-chat-history', handleRefreshChatHistory);
-
     // Clean up the event listener and the timer when the component is unmounted
     return () => {
       clearTimeout(timer); // Clean up the timeout
